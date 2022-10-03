@@ -1,0 +1,44 @@
+#quote-box {
+  margin: 20vh auto;
+  padding: 20px;
+  width: 470px;
+  height: auto;
+  background-color: white;
+  border-radius: 25px;
+}
+
+#text {
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 1px #3b3b3b;
+}
+
+#text:before {
+  content: url("./quote_icon.png");
+}
+
+#author {
+  font-size: 2rem;
+  text-align: right;
+  text-shadow: 0 1px 0 #3b3b3b;
+  font-style: italic;
+  margin-right: 25px;
+}
+
+#author:before {
+  content: "- ";
+}
+
+.buttonsStyles {
+  margin-top: 20px;
+}
+
+#new-quote {
+  float: right;
+  margin-right: 25px;
+}
+
+#tweet-quote {
+  float: left;
+  margin-left: 25px;
+}/*# sourceMappingURL=styles.css.map */

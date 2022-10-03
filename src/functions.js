@@ -1,16 +1,16 @@
-import quotes from "./Quotes";
+import quotes from "./quotes";
 
 let current = "";
-let previous = "";
+let previousIndex = "";
 function FindNewQuote() {
-  let randomIndex = Math.floor(Math.random() * 3);
-  if (randomIndex === previous) {
+  let randomIndex = Math.floor(Math.random() * quotes.length);
+  if (randomIndex === previousIndex) {
     FindNewQuote();
   } else {
     current = quotes[randomIndex];
-    previous = randomIndex;
+    previousIndex = randomIndex;
   }
 }
 FindNewQuote();
 
-export { current, previous, FindNewQuote };
+export { current, FindNewQuote };

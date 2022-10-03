@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { NEW_QUOTE } from "./store";
+import "./styles.css";
 
 function App() {
   let current = useSelector((state) => state);
@@ -12,11 +13,14 @@ function App() {
     <div id="quote-box">
       <div id="text">{current.quote}</div>
       <div id="author">{current.author}</div>
-      <button id="tweet-quote">twitter</button>
-      <button>tubmlr</button>
-      <button id="new-quote" onClick={handleNewQuote}>
-        New quote
-      </button>
+      <div className="buttonsStyles">
+        <a id="tweet-quote" href="twitter.com/intent/tweet">
+          twitter
+        </a>
+        <button id="new-quote" onClick={handleNewQuote}>
+          New quote
+        </button>
+      </div>
     </div>
   );
 }
