@@ -81,5 +81,4 @@ const quotes = [
   },
 ];
 
-console.log("quotes length", quotes.length);
 export default quotes;
