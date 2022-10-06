@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { NEW_QUOTE } from "./store";
+import { NEW_QUOTE, NEW_COLOR } from "./reducers";
 import "./styles.css";
 
 function App() {
@@ -7,12 +7,12 @@ function App() {
   let dispatch = useDispatch();
   let handleNewQuote = () => {
     dispatch({ type: NEW_QUOTE });
+    dispatch({ type: NEW_COLOR });
   };
-
   return (
     <div id="quote-box">
-      <div id="text">{current.quote}</div>
-      <div id="author">{current.author}</div>
+      <div id="text">{current.quoteR.quote}</div>
+      <div id="author">{current.quoteR.author}</div>
       <div className="buttonsStyles">
         <a id="tweet-quote" href="twitter.com/intent/tweet">
           twitter
