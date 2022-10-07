@@ -1,5 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
-import { NEW_QUOTE, NEW_COLOR } from "./reducers";
+import { useEffect } from "react";
+import { NEW_QUOTE } from "./reducers";
+import { color, currentColor } from "./functions";
+import { colors } from "./colors";
 import "./styles.css";
 
 function App() {
@@ -7,12 +10,18 @@ function App() {
   let dispatch = useDispatch();
   let handleNewQuote = () => {
     dispatch({ type: NEW_QUOTE });
-    dispatch({ type: NEW_COLOR });
+    color(colors);
   };
+
+  // appling color/effects to the interface on the first render
+  useEffect(() => {
+    color(colors);
+  }, []);
+
   return (
     <div id="quote-box">
-      <div id="text">{current.quoteR.quote}</div>
-      <div id="author">{current.quoteR.author}</div>
+      <div id="text">{current.quote}</div>
+      <div id="author">{current.author}</div>
       <div className="buttonsStyles">
         <a id="tweet-quote" href="twitter.com/intent/tweet">
           twitter

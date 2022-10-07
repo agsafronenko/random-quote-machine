@@ -1,4 +1,4 @@
-$textColor: #3b3b3b;
+// $textColor: #3b3b3b;
 $fontSize: 2rem;
 $marginLeftandRight: 25px;
 
@@ -14,7 +14,7 @@ $marginLeftandRight: 25px;
 #text {
   font-size: $fontSize * 1.25;
   text-align: center;
-  text-shadow: 1px 1px 1px $textColor;
+  text-shadow: 1px 1px 1px;
 }
 
 #text:before {
@@ -22,9 +22,10 @@ $marginLeftandRight: 25px;
 }
 
 #author {
-  font-size: $fontSize * 1;
+  margin-top: 15px;
+  font-size: $fontSize * 0.9;
   text-align: right;
-  text-shadow: 0 1px 0 $textColor;
+  text-shadow: 0 1px 0;
   font-style: italic;
   margin-right: $marginLeftandRight;
 }

@@ -1,5 +1,6 @@
 import quotes from "./quotes";
 import { colors } from "./colors";
+import $ from "jquery";
 
 // selecting random quote to display
 let currentQuote = "";
@@ -15,7 +16,7 @@ function FindNewQuote() {
 }
 FindNewQuote();
 
-// selecting random color for interface
+// selecting random color for the interface / applying fade in/out effects
 let currentColor = "";
 let previousColorIndex = "";
 function color(colors) {
@@ -26,7 +27,11 @@ function color(colors) {
     currentColor = colors[randomIndex];
     previousColorIndex = randomIndex;
   }
+  $("body").css("background-color", currentColor);
+  $("#text").css("color", currentColor);
+  $("#author").css("color", currentColor);
+  $("body").addClass("animated fadeIn");
+  $("quote-box").addClass("animated fadeOut");
 }
-color(colors);
 
 export { currentQuote, FindNewQuote, currentColor, color };
