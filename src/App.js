@@ -1,30 +1,41 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { NEW_QUOTE } from "./reducers";
-import { color, currentColor } from "./functions";
+import { color } from "./functions";
 import { colors } from "./colors";
 import "./styles.css";
+import $ from "jquery";
 
 function App() {
   let current = useSelector((state) => state);
   let dispatch = useDispatch();
   let handleNewQuote = () => {
-    dispatch({ type: NEW_QUOTE });
-    color(colors);
+    $("html").addClass("animated fadeOut");
+    setTimeout(() => {
+      color(colors);
+      $("html").removeClass("animated fadeOut");
+      dispatch({ type: NEW_QUOTE });
+      $("html").addClass("animated fadeIn");
+    }, 700);
   };
 
-  // appling color/effects to the interface on the first render
+  // appling color/fadeIn to the interface on the first render
   useEffect(() => {
     color(colors);
+
+    $("html").addClass("animated fadeIn");
   }, []);
 
   return (
     <div id="quote-box">
-      <div id="text">{current.quote}</div>
+      <div id="text">
+        <i className="fas fa-quote-left"></i>
+        {" " + current.quote}
+      </div>
       <div id="author">{current.author}</div>
-      <div className="buttonsStyles">
+      <div>
         <a id="tweet-quote" href="twitter.com/intent/tweet">
-          twitter
+          <i className="fa-brands fa-twitter"></i>
         </a>
         <button id="new-quote" onClick={handleNewQuote}>
           New quote

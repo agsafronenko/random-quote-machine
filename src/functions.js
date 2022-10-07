@@ -1,5 +1,4 @@
 import quotes from "./quotes";
-import { colors } from "./colors";
 import $ from "jquery";
 
 // selecting random quote to display
@@ -30,8 +29,7 @@ function color(colors) {
   $("body").css("background-color", currentColor);
   $("#text").css("color", currentColor);
   $("#author").css("color", currentColor);
-  $("body").addClass("animated fadeIn");
-  $("quote-box").addClass("animated fadeOut");
+  $("button").css("background-color", currentColor);
 }
 
-export { currentQuote, FindNewQuote, currentColor, color };
+export { currentQuote, FindNewQuote, color };

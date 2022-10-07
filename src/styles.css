@@ -13,10 +13,6 @@
   text-shadow: 1px 1px 1px;
 }
 
-#text:before {
-  content: url("./quote_icon.png");
-}
-
 #author {
   margin-top: 15px;
   font-size: 1.8rem;
@@ -30,10 +26,6 @@
   content: "- ";
 }
 
-.buttonsStyles {
-  margin-top: 20px;
-}
-
 #new-quote {
   float: right;
   margin-right: 25px;
@@ -42,4 +34,12 @@
 #tweet-quote {
   float: left;
   margin-left: 25px;
+}
+
+button {
+  border-radius: 1.5em;
+  font-weight: 250;
+  color: white;
+  border: 3px solid white;
+  margin-top: 4px;
 }/*# sourceMappingURL=styles.css.map */

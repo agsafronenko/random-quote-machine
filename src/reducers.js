@@ -2,7 +2,6 @@ import { currentQuote, FindNewQuote } from "./functions";
 
 export const NEW_QUOTE = "NEW_QUOTE";
 
-// reducer for quotes
 let initialState = {
   quote: currentQuote.quote,
   author: currentQuote.author,
