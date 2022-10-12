@@ -42,4 +42,14 @@ button {
   color: white;
   border: 3px solid white;
   margin-top: 4px;
+}
+
+footer {
+  font-size: xx-small;
+  font-style: italic;
+  color: white;
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  width: 100vw;
 }/*# sourceMappingURL=styles.css.map */
